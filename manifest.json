@@ -1,0 +1,31 @@
+{
+  "name": "Gonshi Extension",
+  "manifest_version": 2,
+  "version": "2.1",
+  "description": "Gets information from Google.",
+  "content_scripts":[
+	  {
+		  "matches": ["https://twitter.com/TwitterDevJP"],
+		  "js": ["/js/jquery.js", "/js/jquery.flash.js", "/js/transform2d.js", "/js/jquery.easing.js", "/js/main.js"],
+		  "css": ["/css/main.css"]
+	  }
+  ]
+  ,
+  "web_accessible_resources": [
+    "/img/crack.swf",
+    "/img/crack_2.swf",
+    "/img/bg.png",
+    "/img/hammer2.png",
+    "/img/hammer3.png",
+  	"/img/exclamation.png",
+    "/audio/final.mp3",
+    "/audio/jab.mp3",
+    "/audio/second.mp3",
+    "/audio/swing.mp3",
+    "/audio/bgm.mp3",
+    "/audio/stamp.mp3",
+    "/audio/striking.mp3",
+    "/audio/gameover.mp3",
+    "/audio/third.mp3"
+  ]
+}

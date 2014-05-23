@@ -1,0 +1,119 @@
+body{
+	width: 100%;
+	position: fixed;
+}
+
+.profile-header-inner{
+	overflow: visible !important;
+}
+
+img.avatar.size73{
+	position: absolute;
+	left: 0px;
+}
+
+.exclamation{
+	position: absolute;
+	width: 150px;
+	left: -120px;
+	top: -110px;
+	-webkit-transform: scale(0) rotate(-10deg);
+}
+
+.pointer {
+	width: 606px;
+	height: 330px;
+	-webkit-transform-origin: 470px 220px;
+	-moz-transform-origin: 470px 220px;
+	-ms-transform-origin: 470px 220px;
+	-o-transform-origin: 470px 220px;
+	transform-origin: 470px 220px;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	img{
+		margin-top: -0.5 * (image-height("hammer.png"));
+		margin-left: -0.5 * (image-width("hammer.png"));
+	}
+}
+
+.extension_tweet {
+	text-align: left;
+	position: absolute;
+	z-index: 99; 
+	font-size: 1.2rem;
+	line-height: 3rem;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #666;
+	/*
+	-webkit-transform-origin: 100% 50px;
+	-moz-transform-origin: 100% 50px;
+	-ms-transform-origin: 100% 50px;
+	-o-transform-origin: 100% 50px;
+	transform-origin: 100% 50px;
+	*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-transform: scale(0, 0);
+	-moz-transform: scale(0, 0);
+	-ms-transform: scale(0, 0);
+	-o-transform: scale(0, 0);
+	transform: scale(0, 0);
+	width: 500px;
+}
+
+.extension_tweet .icon{
+	vertical-align: middle;
+}
+
+.extension_tweet .username{
+	font-size: 1.2em;
+	line-height: 48px;
+	margin-left: 20px;
+	color: gray;
+}
+
+.extension_tweet .text{
+	border-top: 1px solid gray;
+	margin-top: 10px;
+}
+
+.extension_tweet:after {
+	content: '';
+	background: url('http://lab.gonshi.net/assets/img/balloon.png') no-repeat center;
+	position: absolute;
+	height: 80px;
+	width: 118px;
+	z-index: -1;
+	bottom: -76px;
+	left: 50px;
+}
+
+img.crack1, img.crack2, img.crack3, img.crack4, img.crack5{
+	opacity: 0;
+	width: 78px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*margin: -120px 0 0 -120px;*/
+	z-index: 99;
+}
+
+img.gameover{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.flash{
+	position: absolute;
+}
