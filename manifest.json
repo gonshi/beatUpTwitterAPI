@@ -5,7 +5,7 @@
   "description": "Gets information from Google.",
   "content_scripts":[
 	  {
-		  "matches": ["https://twitter.com/TwitterDevJP"],
+		  "matches": ["https://twitter.com/twitterapi", "https://twitter.com/twitterapi/"],
 		  "js": ["/js/jquery.js", "/js/jquery.flash.js", "/js/transform2d.js", "/js/jquery.easing.js", "/js/main.js"],
 		  "css": ["/css/main.css"]
 	  }
@@ -18,6 +18,12 @@
     "/img/hammer2.png",
     "/img/hammer3.png",
   	"/img/exclamation.png",
+    "/img/level1.png",
+    "/img/level2.png",
+    "/img/level3.png",
+    "/img/level4.png",
+    "/img/level5.png",
+	"/img/twitter.gif",
     "/audio/final.mp3",
     "/audio/jab.mp3",
     "/audio/second.mp3",
