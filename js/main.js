@@ -1,9 +1,9 @@
 $(function(){
 	// making Exclamation Img
-	var exclamation = $('<img>').addClass('exclamation').attr({'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/img/exclamation.png'});
+	var exclamation = $('<img>').addClass('exclamation').attr({'src': chrome.extension.getURL('/img/exclamation.png') });
 	exclamation.appendTo('.ProfileCanopy-avatar');
 	//----------------------
-	var audio_stamp = $('<audio>').attr({'id': 'stamp', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/stamp.mp3', 'preload': 'auto', 'volume': '0.2'});	
+	var audio_stamp = $('<audio>').attr({'id': 'stamp', 'src': chrome.extension.getURL('/audio/stamp.mp3'), 'preload': 'auto', 'volume': '0.2'});	
 	var key_pressed = false;
 	audio_stamp.appendTo('body');
 	audio_stamp = document.getElementById('stamp');
@@ -17,13 +17,12 @@ $(function(){
 	var current_damage = 0; 
 
 	// audio -----------------------------
-	var audio_final = $('<audio>').attr({'id': 'final', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/final.mp3', 'preload': 'auto'});	
-	var audio_jab = $('<audio>').attr({'id': 'jab', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/jab.mp3', 'preload': 'auto'});	
-	var audio_second = $('<audio>').attr({'id': 'second', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/second.mp3', 'preload': 'auto'});	
-	var audio_swing = $('<audio>').attr({'id': 'swing', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/swing.mp3', 'preload': 'auto'});	
-	var audio_striking = $('<audio>').attr({'id': 'striking', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/striking.mp3', 'preload': 'auto'});	
-	var audio_gameover = $('<audio>').attr({'id': 'gameover', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/gameover.mp3', 'preload': 'auto'});	
-	var audio_third = $('<audio>').attr({'id': 'third', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/third.mp3', 'preload': 'auto'});	
+	var audio_final = $('<audio>').attr({'id': 'final', 'src': chrome.extension.getURL('/audio/final.mp3'), 'preload': 'auto'});	
+	var audio_jab = $('<audio>').attr({'id': 'jab', 'src': chrome.extension.getURL('/audio/jab.mp3'), 'preload': 'auto'});	
+	var audio_second = $('<audio>').attr({'id': 'second', 'src': chrome.extension.getURL('/audio/second.mp3'), 'preload': 'auto'});	
+	var audio_swing = $('<audio>').attr({'id': 'swing', 'src': chrome.extension.getURL('/audio/swing.mp3'), 'preload': 'auto'});	
+	var audio_striking = $('<audio>').attr({'id': 'striking', 'src': chrome.extension.getURL('/audio/striking.mp3'), 'preload': 'auto'});	
+	var audio_third = $('<audio>').attr({'id': 'third', 'src': chrome.extension.getURL('/audio/third.mp3'), 'preload': 'auto'});	
 	// btm
 	//var audio_bgm = $('<audio>').attr({'id': 'bgm', 'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/audio/bgm.mp3', 'preload': 'auto', 'autoplay': 'true', 'loop': 'true', 'volume': 0.001});	
 	audio_final.appendTo('body');
@@ -31,7 +30,6 @@ $(function(){
 	audio_second.appendTo('body');
 	audio_swing.appendTo('body');
 	audio_striking.appendTo('body');
-	audio_gameover.appendTo('body');
 	audio_third.appendTo('body');
 	//audio_bgm.appendTo('body');
 	
@@ -41,12 +39,11 @@ $(function(){
 	audio_second = document.getElementById('second');
 	audio_third = document.getElementById('third');
 	audio_striking = document.getElementById('striking');
-	audio_gameover= document.getElementById('gameover');
 	//audio_bgm = document.getElementById('bgm');
 	// -------------------------------------
 	// making the cracking images
 	for(var i = 1; i < 6; i++){ 
-		var crack = $('<img>').addClass('crack' + i).attr({'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/img/level' + i +'.png'});
+		var crack = $('<img>').addClass('crack' + i).attr({'src': chrome.extension.getURL('/img/level' + i +'.png')});
 		crack.appendTo('.ProfileCanopy-avatar');
 	}
 	// --
@@ -57,7 +54,7 @@ $(function(){
 	//--------------------------------------
 
 	// making Gameover Img
-	var gameover = $('<img>').addClass('gameover').attr({'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/img/bg.png'}).css({'top': - $(window).height()});
+	var gameover = $('<img>').addClass('gameover').attr({'src': chrome.extension.getURL('/img/bg.png')}).css({'top': - $(window).height()});
 	gameover.appendTo('body');
 	//----------------------
 	var tweet_data = {
@@ -74,7 +71,7 @@ $(function(){
 	//-----------------------------
 	// make DOM of 'pointer-----
 	var pointer = $('<div/>').addClass('pointer');
-	var img = $('<img>').attr({'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/img/hammer2.png'});
+	var img = $('<img>').attr({'src': chrome.extension.getURL('/img/hammer2.png')});
 	pointer.append(img);
 	pointer.appendTo('#doc');	
 	//--------------------------
@@ -109,7 +106,7 @@ $(function(){
 					$('.flash').css({'top': $('img.ProfileAvatar-image').position().top - 15, 'left': $('img.ProfileAvatar-image').position().left - 191});
 					$('.flash').flash(
 						{
-							src: 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/img/crack.swf',
+							src: chrome.extension.getURL('/img/crack.swf'),
 							width: 667,
 							height: 1000,
 							wmode: 'transparent'
@@ -127,9 +124,6 @@ $(function(){
 					setTimeout(function(){
 						$('img.gameover').animate({'top' : 0}, 1500, 'easeOutBounce');
 						audio_striking.play();
-						setTimeout(function(){
-							audio_gameover.play();
-						},2000);
 					}, 2000);
 				}
 				else{
@@ -188,7 +182,7 @@ $(function(){
 			setTimeout(function(){
 				$('img.exclamation').animate({'transform': 'scale(1) rotate(-10deg)'}, 150, 'easeOutElastic').delay(1000).animate({'transform': 'scale(0) rotate(-10deg)'}, 150, 'easeOutElastic', function(){
 					// move Twitter API icon------------
-					$('img.ProfileAvatar-image').attr({'src': 'chrome-extension://ckoiooeippmkidpcbahhabakeffpjfbo/img/twitter.gif'});
+					$('img.ProfileAvatar-image').attr({'src': chrome.extension.getURL('/img/twitter.gif')});
 
 					setTimeout(function(){
 						$('img.ProfileAvatar-image').animate({'transform': 'scale(1.5)'}, 500, function(){

@@ -3,6 +3,15 @@ body{
 	position: fixed;
 }
 
+.profile-header-inner{
+	overflow: visible !important;
+}
+
+img.avatar.size73{
+	position: absolute;
+	left: 0px;
+}
+
 .exclamation{
 	position: absolute;
 	width: 150px;
@@ -24,13 +33,10 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 10;
-}
-
-.pointer img{
-/*
-	margin-top: 135px;
-	margin-left:  179px;
-*/
+	img{
+		margin-top: -0.5 * (image-height("hammer.png"));
+		margin-left: -0.5 * (image-width("hammer.png"));
+	}
 }
 
 .extension_tweet {
@@ -42,6 +48,13 @@ body{
 	padding: 20px;
 	background-color: #fff;
 	border: 1px solid #666;
+	/*
+	-webkit-transform-origin: 100% 50px;
+	-moz-transform-origin: 100% 50px;
+	-ms-transform-origin: 100% 50px;
+	-o-transform-origin: 100% 50px;
+	transform-origin: 100% 50px;
+	*/
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -82,24 +95,17 @@ body{
 	left: 50px;
 }
 
-.ProfileAvatar-image{
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.crack1, .crack2, .crack3, .crack4, .crack5{
+img.crack1, img.crack2, img.crack3, img.crack4, img.crack5{
 	opacity: 0;
-	width: 210px;
+	width: 78px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	-webkit-transform: scale(1.5);
 	/*margin: -120px 0 0 -120px;*/
 	z-index: 99;
 }
 
-.gameover{
+img.gameover{
 	height: 100%;
 	width: 100%;
 	position: fixed;

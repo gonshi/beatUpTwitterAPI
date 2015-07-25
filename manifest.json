@@ -1,16 +1,17 @@
 {
-  "name": "Gonshi Extension",
+  "name": "Twitter API叩き",
   "manifest_version": 2,
   "version": "2.1",
-  "description": "Gets information from Google.",
+  "description": "Twitter APIを「本当に」叩くことを体験できます",
+  "icons": { "48": "icon48.png",
+          "128": "icon128.png" },
   "content_scripts":[
 	  {
 		  "matches": ["https://twitter.com/twitterapi", "https://twitter.com/twitterapi/"],
 		  "js": ["/js/jquery.js", "/js/jquery.flash.js", "/js/transform2d.js", "/js/jquery.easing.js", "/js/main.js"],
 		  "css": ["/css/main.css"]
 	  }
-  ]
-  ,
+  ],
   "web_accessible_resources": [
     "/img/crack.swf",
     "/img/crack_2.swf",
